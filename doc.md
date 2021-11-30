@@ -9,3 +9,9 @@
   `sudo ./svc install`
   `sudo ./svc status`
   `sudo ./svc start`
+
+## TODO
+
+- risolvere problema cancellazione file .env (perchè messo nel .gitignore)
+- far funzionare il file ecosystem.config.js con gli ES modules
+- capire come disinstallare runner, ecc
