@@ -18,7 +18,7 @@ fastify.register(Env, {
 });
 
 fastify.get("/hello", async (req, reply) => {
-  return { msg: "Hello World!", v: 2 };
+  return { msg: "Hello World!", v: 3 };
 });
 
 const port = process.env.SERVER_PORT;
