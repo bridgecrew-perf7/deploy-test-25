@@ -4,7 +4,7 @@ module.exports = {
       name: "deploy-test",
       cwd: "/opt/deploy-test/deploy-test/deploy-test/deploy-test",
       script: "index.js",
-      // node_args: "-r dotenv/config",
+      node_args: "-r dotenv/config",
       env: {
         NODE_ENV: "production",
       },
