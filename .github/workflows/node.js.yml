@@ -32,5 +32,5 @@ jobs:
           cat .env
       - run: npm i
       - run: npm test --if-present
-      - run: pm2 restart ecosystem.config.mjs
+      - run: pm2 restart ecosystem.config.cjs
       - run: pm2 save
