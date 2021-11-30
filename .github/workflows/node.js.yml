@@ -16,6 +16,8 @@ jobs:
     #   SERVER_ADDRESS: "0.0.0.0"
     #   SERVER_PORT: 3000
 
+    environment: staging
+
     strategy:
       matrix:
         node-version: [16.x]
