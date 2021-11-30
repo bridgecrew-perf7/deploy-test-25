@@ -1,9 +1,20 @@
 const Fastify = require("fastify");
+const Env = require("fastify-env");
+const S = require("fluent-json-schema");
 
 const fastify = Fastify({
   logger: {
     level: "debug",
   },
+});
+
+fastify.register(Env, {
+  schema: S.object()
+    .prop("SERVER_ADDRESS", S.string())
+    .required()
+    .prop("SERVER_PORT", S.string())
+    .required()
+    .valueOf(),
 });
 
 fastify.get("/hello", async (req, reply) => {

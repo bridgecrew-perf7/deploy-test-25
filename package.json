@@ -12,6 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^10.0.0",
-    "fastify": "^3.24.1"
+    "fastify": "^3.24.1",
+    "fastify-env": "^2.1.1",
+    "fluent-json-schema": "^3.0.1"
   }
 }

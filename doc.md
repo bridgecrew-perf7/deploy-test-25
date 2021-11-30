@@ -10,9 +10,12 @@
   `sudo ./svc status`
   `sudo ./svc start`
 
+- siccome il file .env non viene aggiunto a repo, il checkout delle GA lo cancellano.
+  Per ovviare viene creato il file .env dentro il workflow, prendendo le variabili sensibili dalle secrets del repo stesso.
+  Per cui, prima di tutto, impostare le secrets e aggiungere l'environment al file di workflow
+
 ## TODO
 
 - provare pacchetto fastify per node env + env tramite workflow file
-- risolvere problema cancellazione file .env (perchè messo nel .gitignore)
 - far funzionare il file ecosystem.config.js con gli ES modules
 - capire come disinstallare runner, ecc
