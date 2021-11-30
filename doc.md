@@ -12,6 +12,7 @@
 
 ## TODO
 
+- provare pacchetto fastify per node env + env tramite workflow file
 - risolvere problema cancellazione file .env (perchè messo nel .gitignore)
 - far funzionare il file ecosystem.config.js con gli ES modules
 - capire come disinstallare runner, ecc

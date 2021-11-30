@@ -11,10 +11,10 @@ jobs:
   deploy:
     runs-on: self-hosted
 
-    env:
-      NODE_ENV: production
-      SERVER_ADDRESS: "0.0.0.0"
-      SERVER_PORT: 3000
+    # env:
+    #   NODE_ENV: production
+    #   SERVER_ADDRESS: "0.0.0.0"
+    #   SERVER_PORT: 3000
 
     strategy:
       matrix:
@@ -28,6 +28,12 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
+      - name: Create env file
+        run: |
+          touch .env
+          echo SERVER_ADDRESS=${{ secrets.SERVER_ADDRESS }} >> .env
+          echo SERVER_PORT=${{ secrets.SERVER_PORT }} >> .env
+          cat .env
       - run: npm i
       - run: npm test --if-present
       - run: pm2 restart ecosystem.config.js
