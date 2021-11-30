@@ -1,6 +1,6 @@
-const Fastify = require("fastify");
-const Env = require("fastify-env");
-const S = require("fluent-json-schema");
+import Fastify from "fastify";
+import Env from "fastify-env";
+import S from "fluent-json-schema";
 
 const fastify = Fastify({
   logger: {
