@@ -7,7 +7,7 @@ const fastify = Fastify({
 });
 
 fastify.get("/hello", async (req, reply) => {
-  return "Hello World!";
+  return "Hello World! --> pm2 restart";
 });
 
 fastify.listen(3000, "0.0.0.0", (err) => {
