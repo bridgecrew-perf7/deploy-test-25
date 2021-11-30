@@ -10,8 +10,8 @@ fastify.get("/hello", async (req, reply) => {
   return { msg: "Hello World!", v: 2 };
 });
 
-const port = 3000;
-const host = "0.0.0.0";
+const port = process.env.SERVER_PORT;
+const host = process.env.SERVER_ADDRESS;
 
 fastify.listen(port, host, (err) => {
   if (err) {
