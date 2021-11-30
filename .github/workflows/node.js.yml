@@ -8,8 +8,11 @@ on:
     branches: [master]
 
 jobs:
-  build:
+  deploy:
     runs-on: self-hosted
+
+    env:
+      NODE_ENV: production
 
     strategy:
       matrix:
